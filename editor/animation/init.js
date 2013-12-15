@@ -56,17 +56,18 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             var rightResult = data.ext["answer"];
             var userResult = data.out;
             var result = data.ext["result"];
-            var result_addon = data.ext["result_addon"];
+            var result_message = data.ext["result_addon"][1];
+            var result_draw = data.ext["result_addon"][0];
 
 
             //if you need additional info from tests (if exists)
             var explanation = data.ext["explanation"];
 
-            $content.find('.output').html('&nbsp;Your result:&nbsp;' + JSON.stringify(userResult));
+            $content.find('.output').html(result_message + "<br>" + JSON.stringify(userResult));
 
             if (!result) {
                 $content.find('.call').html('Fail: checkio(' + JSON.stringify(checkioInput) + ')');
-                $content.find('.answer').html('Right result:&nbsp;' + JSON.stringify(rightResult));
+                $content.find('.answer').html('Right variant:&nbsp;' + JSON.stringify(rightResult[0]));
                 $content.find('.answer').addClass('error');
                 $content.find('.output').addClass('error');
                 $content.find('.call').addClass('error');
@@ -75,16 +76,11 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 $content.find('.call').html('Pass: checkio(' + JSON.stringify(checkioInput) + ')');
                 $content.find('.answer').remove();
             }
-            //Dont change the code before it
 
-            //Your code here about test explanation animation
-            //$content.find(".explanation").html("Something text for example");
-            //
-            //
-            //
-            //
-            //
-
+            if (result_draw) {
+                var canvas = new DigitsDoupletDiv();
+                canvas.createDiv($content.find(".explanation"), checkioInput, userResult);
+            }
 
             this_e.setAnimationHeight($content.height() + 60);
 
@@ -106,22 +102,73 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
 //            });
 //        });
 
-        var colorOrange4 = "#F0801A";
-        var colorOrange3 = "#FA8F00";
-        var colorOrange2 = "#FAA600";
-        var colorOrange1 = "#FABA00";
+        function DigitsDoupletDiv(options) {
+            options = options || {};
+            var colorOrange4 = "#F0801A";
+            var colorOrange3 = "#FA8F00";
+            var colorOrange2 = "#FAA600";
+            var colorOrange1 = "#FABA00";
 
-        var colorBlue4 = "#294270";
-        var colorBlue3 = "#006CA9";
-        var colorBlue2 = "#65A1CF";
-        var colorBlue1 = "#8FC7ED";
+            var colorBlue4 = "#294270";
+            var colorBlue3 = "#006CA9";
+            var colorBlue2 = "#65A1CF";
+            var colorBlue1 = "#8FC7ED";
 
-        var colorGrey4 = "#737370";
-        var colorGrey3 = "#9D9E9E";
-        var colorGrey2 = "#C5C6C6";
-        var colorGrey1 = "#EBEDED";
+            var colorGrey4 = "#737370";
+            var colorGrey3 = "#9D9E9E";
+            var colorGrey2 = "#C5C6C6";
+            var colorGrey1 = "#EBEDED";
 
-        var colorWhite = "#FFFFFF";
+            var colorWhite = "#FFFFFF";
+
+            var root;
+
+            function countDiff(f, s) {
+                f = String(f);
+                s = String(s);
+                if (f.length !== s.length) {
+                    return 0;
+                }
+                var r = 0;
+                for (var i = 0; i < f.length; i++) {
+                    if (f[i] !== s[i]) {
+                        r++;
+                    }
+                }
+                return r;
+            }
+
+            this.createDiv = function(dom, numbers, chain) {
+                root = dom;
+                for (var i = 0; i < chain.length; i++) {
+                    var numb = chain[i];
+                    var span = $("<span></span>").addClass("no-wrap");
+                    var $numb = $("<span></span>").html(numb);
+                    var $arr = $("<span></span>").html("&nbsp&rArr; ");
+                    if (numbers.indexOf(numb) === -1) {
+                        $numb.addClass("wrong-number");
+                    }
+                    if (i === 0 || i === (chain.length - 1)) {
+                        span.addClass("edge-number");
+                    }
+                    span.append($numb);
+                    if (i !== (chain.length - 1)) {
+                        if (countDiff(chain[i], chain[i+1]) !== 1) {
+                            $arr.addClass("wrong-number");
+                        }
+                        span.append($arr);
+                    }
+
+                    root.append(span);
+
+
+                }
+            }
+
+
+        }
+
+
         //Your Additional functions or objects inside scope
         //
         //
