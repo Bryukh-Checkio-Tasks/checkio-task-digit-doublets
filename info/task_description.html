@@ -81,9 +81,10 @@
 
 
 <p>
-    Doublets (also known as Word ladder) is a word game invented by Charles Dodgson (Lewis Carroll).
-    A doublets puzzle begins with two words, and to solve the puzzle one must find a chain of other words to link the two,
-    in which two adjacent words (that is, words in successive steps) differ by one letter.
+    Doublets, sometimes known as Word ladder, is a word game invented by Charles Dodgson (aka Lewis Carroll).
+    A doublets puzzle begins with two words.
+    To solve the puzzle one must find a chain of different words to link the two together such that the two adjacent words
+    differ by one letter.
 </p>
 
 <p>
@@ -92,10 +93,9 @@
 </p>
 
 <p>
-    But our Robots like digits more than letters, thus we changed the rules little.
-    You are given the list of numbers the same length and
-    to solve the puzzle you should find the shortest chain of numbers (from given list)
-    to link the first number with the last in which two adjacent numbers differ by one digit.
+    The Robots like using digits more than letters, so we’ve changed the rules little.
+    You are given the list of numbers with exactly the same length and you must find the shortest chain of numbers
+    to link the first number to the last like you would with the words.
 </p>
 
 <p>
@@ -104,15 +104,15 @@
     <strong>123</strong>&nbsp;&rArr; 121&nbsp;&rArr; 921&nbsp;&rArr; 991&nbsp;&rArr; <strong>999</strong>
 </p>
 
-<p>You should write a function that receive a list of numbers (positive integers) and
+<p>You should write a function that receiveы a list of numbers (positive integers) and
     returns the shortest route as a list of numbers.</p>
 
 <p>
-    <strong>Input: </strong> A list of numbers with the same length.
+    <strong>Input: </strong> Numbers as a list of integers.
 </p>
 
 <p>
-    <strong>Output: </strong> The shortest chain from the first to the last number, as a list of integers.
+    <strong>Output: </strong> The shortest chain from the first to the last number as a list of integers.
 </p>
 
 
@@ -129,5 +129,11 @@ checkio([456, 455, 454, 356, 656, 654]) == [456, 454, 654]  # or [456, 656, 654]
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    Maybe it will be a hint, but in this task we want to show your how to use graph search algorithms for various problems.
+    This task is like pathfinding for numbers.
+    It shows how many things in this world can be represented with mathematics, even words.
+</p>
+
+<p>
+    <strong>Precondition:</strong> Numbers have the same length<br>
+    &forall; x ∈ numbers : x &le 100 < 1000<br>
 </p>
