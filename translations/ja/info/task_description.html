@@ -1,0 +1,135 @@
+﻿<style type="text/css">
+    .story .shadow {
+        float: left;
+        /*padding: 10px;*/
+        margin: 10px;
+        border: black;
+
+        /*box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1);*/
+        /*-moz-box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1);*/
+        /*-webkit-box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1);*/
+
+    }
+
+    .story .left {
+        float: left;
+    }
+
+    .story .right {
+        float: right;
+
+    }
+
+    .story .title {
+        font-weight: bold;
+        margin: 20px 0 20px 0;
+    }
+
+</style>
+<div class="for_info_only" style="position: relative;">
+    <div class="story" style="margin-bottom: 20px">
+        <img src="{{ MEDIA }}alice-queen-sepia.png" class="shadow left" width="220px">
+
+        <p>
+            ...「それから、あなた」 アリスは赤の女王、
+            おそらくこの悪戯の全ての元凶にキッと向き直って続けた。
+            しかしもう彼女はそばにはおらず、小さい人形くらいの大きさに縮んで、
+            自分が引きずるショールを追いかけて大はしゃぎで走り回っていました。
+        </p>
+
+        <p>
+            アリスはいつもなら驚いているはずのことなのに、
+            今はそんなことよりも怒りが上回ってました。
+            「全くあなたは」彼女は繰り返し言いました。
+            そしてその小さな生き物がテーブルの上で燃えだしたボトルの上を飛び越えた瞬間を捕まえました。
+            「かき回して子猫にしちゃうんだから。こうよ！」
+        </p>
+        <img src="{{ MEDIA }}alice-kitty-sepia.png" class="shadow right" width="220px">
+
+        <p class="title">
+            第10章 . 揺さぶり
+        </p>
+
+        <p>
+
+
+            彼女は言ったとおりに女王をテーブルから持ち上げて
+            前後に力いっぱい揺すりました。
+
+            でも赤の女王は全く抵抗しませんでした。
+            ただ彼女の顔は小さく、目は大きな緑色になっていき、
+            なおもアリスが揺さぶり続けると小さくふさふさで柔らかな丸っこい…
+
+        </p>
+
+        <p class="title">
+            第11章 . 目覚め
+        </p>
+
+        <p>
+            そして、それは本当に子猫になっていました。
+        </p>
+        <p style="float: right">
+            「鏡の国のアリス」ルイス・キャロル
+        </p>
+    <div style="clear: both;"></div>
+    </div>
+</div>
+
+
+
+<p>
+    ダブレット(ときどき「言葉のはしご」として知られている)はチャールズ・ドジソン(ルイス・キャロル)が発明した言葉遊びである。
+    ダブレットは、
+    2つの単語の間を埋める一文字だけ替えた単語の連鎖を見つけるパズルである。
+</p>
+
+<p>
+    例: <strong>FLOUR</strong>&nbsp;&rArr; FLOOR&nbsp;&rArr; FLOOD&nbsp;&rArr; BLOOD&nbsp;&rArr;
+    BROOD&nbsp;&rArr; BROAD&nbsp;&rArr; <strong>BREAD</strong>
+</p>
+
+<p>
+    ロボット達は文字より数を使うのが好きである。 だからこのパズルのルールを少し変えることにした。
+    あなたは同じ桁の数のリストが与えられる。
+    そして言葉のはしごのように最初から最後の数につながる最短のつながりを見つけ出さなければならない。
+</p>
+
+<p>
+    例えばリスト [123, 991, 323, 321, 329, 121, 921, 125, 999] の場合、
+    最初から最後の数への最短のつながりは:
+    <strong>123</strong>&nbsp;&rArr; 121&nbsp;&rArr; 921&nbsp;&rArr; 991&nbsp;&rArr; <strong>999</strong>
+</p>
+
+<p>あなたは与えられた数(正の数)のリストより最短の数のリストを返す関数を書くこと。</p>
+
+<p>
+    <strong>入力: </strong> 数(integer型)のリスト。
+</p>
+
+<p>
+    <strong>出力: </strong> 最初から最後の数への最短の数(integer型)のリスト。
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>例:</strong>
+    </p>
+    <pre class="brush: python">
+checkio([123, 991, 323, 321, 329, 121, 921, 125, 999]) == [123, 121, 921, 991, 999]
+checkio([111, 222, 333, 444, 555, 666, 121, 727, 127, 777]) == [111, 121, 127, 727, 777]
+checkio([456, 455, 454, 356, 656, 654]) == [456, 454, 654]  # or [456, 656, 654]
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>どのように使われるか: </strong>
+    このタスクは数を使った経路探索に似ている。
+    これによりこの世界には言葉で無くとも数で表せることがいかに多いかを理解できる。
+</p>
+
+<p>
+    <strong>事前条件:</strong> 数の桁数は全て同じ。<br>
+    &forall; x ∈ numbers : 100 &le; x < 1000<br>
+</p>
