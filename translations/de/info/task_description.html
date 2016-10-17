@@ -4,11 +4,9 @@
         /*padding: 10px;*/
         margin: 10px;
         border: black;
-
         /*box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1);*/
         /*-moz-box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1);*/
         /*-webkit-box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1);*/
-
     }
 
     .story .left {
@@ -24,101 +22,100 @@
         font-weight: bold;
         margin: 20px 0 20px 0;
     }
-
 </style>
 <div class="for_info_only" style="position: relative;">
     <div class="story" style="margin-bottom: 20px">
         <img src="{{ MEDIA }}alice-queen-sepia.png" class="shadow left" width="220px">
 
         <p>
-            ...'And as for YOU,' she went on, turning fiercely upon the Red Queen, whom
-            she considered as the cause of all the mischief--but the Queen was no
-            longer at her side--she had suddenly dwindled down to the size of a
-            little doll, and was now on the table, merrily running round and round
-            after her own shawl, which was trailing behind her.
+            ... »Und was Euch betrifft,« fuhr Alice fort und wandte sich wütend an die Schwarze
+            Königin, die sie für die Ursache des ganzen Unfugs hielt – aber die Königin war
+            nicht mehr an ihrer Seite – sie war plötzlich auf die Größe einer kleinen Puppe
+            geschrumpft und befand sich jetzt auf dem Tisch, wo sie fröhlich im Kreis ihrem
+            Schal nachlief, der hinter ihr herschleifte.
         </p>
 
         <p>
-            At any other time, Alice would have felt surprised at this, but she was
-            far too much excited to be surprised at anything NOW. 'As for YOU,'
-            she repeated, catching hold of the little creature in the very act of
-            jumping over a bottle which had just lighted upon the table, 'I'll shake
-            you into a kitten, that I will!'
+            Zu jeder anderen Zeit wäre Alice darüber verwundert gewesen, aber sie war viel
+            zu aufgeregt, um sich jetzt über irgendetwas zu wundern. »Was dich betrifft,«
+            wiederholte sie und kriegte das kleine Geschöpf zu pakken, als es gerade über
+            eine Flasche sprang, die eben auf dem Tisch gelandet war, »ich schüttele dich,
+            bis du ein Kätzchen bist!«
         </p>
+
         <img src="{{ MEDIA }}alice-kitty-sepia.png" class="shadow right" width="220px">
 
         <p class="title">
-            CHAPTER X. Shaking
+            Kapitel X. Schütteln
         </p>
 
         <p>
-
-
-            She took her off the table as she spoke, and shook her backwards and
-            forwards with all her might.
-
-            The Red Queen made no resistance whatever; only her face grew very
-            small, and her eyes got large and green: and still, as Alice went on
-            shaking her, she kept on growing shorter--and fatter--and softer--and
-            rounder--and--
-
+            Sie nahm die Königin vom Tisch, während sie sprach, und schüttelte sie mit aller
+            Kraft vor und zurück.<br>
+            Die Schwarze Königin leistete überhaupt keinen Widerstand; nur ihr Gesicht wurde
+            sehr klein und ihre Augen wurden groß und grün; und als Alice sie weiter schüttelte,
+            fuhr sie fort, kleiner zu werden – und fetter – und weicher – und runder – und –
         </p>
 
         <p class="title">
-            CHAPTER XI. Waking
+            Kapitel XI. Erwachen
         </p>
 
         <p>
-            --and it really WAS a kitten, after all.
+            – und es war zu guter Letzt wirklich ein Kätzchen
         </p>
         <p style="float: right">
-            "Through the Looking-Glass." Lewis Carroll
+            "Alice hinter den Spiegeln" von Lewis Carroll<br>
+            Aus dem Englischen von Jörg Karau, 2008
         </p>
-    <div style="clear: both;"></div>
+        <div style="clear: both;"></div>
     </div>
 </div>
 
-
-
 <p>
-    Doublets, sometimes known as Word ladder, is a word game invented by Charles Dodgson (aka Lewis Carroll).
-    A doublets puzzle begins with two words.
-    To solve the puzzle one must find a chain of different words to link the two together such that the two adjacent words
-    differ by one letter.
+    Wortleiter ist ein Buchstabenrätsel, das von Charles Dodgson (alias Lewis Carroll)
+    erfunden wurde.
+    Bei diesem Spiel geht es darum, zwei unterschiedliche Worte gleicher Länge durch eine
+    Kette von Worten miteinander zu verbinden.
+    Dazu darf in jedem Schritt nur ein einziger Buchstabe verändert werden.
 </p>
 
 <p>
-    For Example: <strong>FLOUR</strong>&nbsp;&rArr; FLOOR&nbsp;&rArr; FLOOD&nbsp;&rArr; BLOOD&nbsp;&rArr;
-    BROOD&nbsp;&rArr; BROAD&nbsp;&rArr; <strong>BREAD</strong>
+    Zum Beispiel: <strong>HALM</strong>&nbsp;&rArr; HALT&nbsp;&rArr; HART&nbsp;&rArr;
+    HORT&nbsp;&rArr; HORN&nbsp;&rArr; <strong>KORN</strong>
 </p>
 
 <p>
-    The Robots like using digits more than letters, so we’ve changed the rules a little.
-    You are given the list of numbers with exactly the same length and you must find the shortest chain of numbers
-    to link the first number to the last like you would with the words.
+    Die Roboter bevorzugen Ziffern anstelle von Buchstaben, also haben wir die Regeln ein
+    wenig verändert.<br>
+    Gegeben ist eine Liste von Zahlen gleicher Länge. Die erste und letzte Zahl bilden
+    den Start- und Endpunkt der Kette. Deine Aufgabe besteht darin, aus den übrigen Zahlen
+    der Liste die kürzest gültige Kette zu bilden.
 </p>
 
 <p>
-    For Example. There is a list [123, 991, 323, 321, 329, 121, 921, 125, 999].
-    The shortest way from the first to the last is:
+    <strong>Ein Beispiel:</strong><br>
+    Die Liste: [123, 991, 323, 321, 329, 121, 921, 125, 999]<br>
+    Die kürzest gültige Kette von der ersten (123) bis zur letzten Zahl (999) ist:
     <strong>123</strong>&nbsp;&rArr; 121&nbsp;&rArr; 921&nbsp;&rArr; 991&nbsp;&rArr; <strong>999</strong>
 </p>
 
-<p>You should write a function that receives a list of numbers (positive integers) and
-    returns the shortest route as a list of numbers.</p>
-
 <p>
-    <strong>Input: </strong> Numbers as a list of integers.
+    Schreibe eine Funktion, die als Argument eine Liste von positiven, ganzen Zahlen übernimmt
+    und die kürzest gültige Kette zurückgibt.
 </p>
 
 <p>
-    <strong>Output: </strong> The shortest chain from the first to the last number as a list of integers.
+    <strong>Eingabe: </strong> Zahlen als Liste von ganzen Zahlen.
 </p>
 
+<p>
+    <strong>Ausgabe: </strong> Die kürzeste, gültige Kette von der ersten bis zur letzten Zahl als Liste.
+</p>
 
 <div class="for_info_only">
     <p>
-        <strong>Example:</strong>
+        <strong>Beispiele:</strong>
     </p>
     <pre class="brush: python">
 checkio([123, 991, 323, 321, 329, 121, 921, 125, 999]) == [123, 121, 921, 991, 999]
@@ -128,12 +125,13 @@ checkio([456, 455, 454, 356, 656, 654]) == [456, 454, 654]  # or [456, 656, 654]
 </div>
 
 <p class="for_info_only">
-    <strong>How it is used: </strong>
-    This task is like pathfinding for numbers.
-    It shows how many things in this world can be represented with mathematics, even words.
+    <strong>Wozu das gut ist:</strong><br>
+    Diese Aufgabe ist eine Variante des <a href="https://de.wikipedia.org/wiki/Pathfinding">
+    Pathfinding<a> für Zahlen.
 </p>
 
 <p>
-    <strong>Precondition:</strong> Numbers have the same length<br>
-    &forall; x ∈ numbers : 100 &le; x < 1000<br>
+    <strong>Bedingungen:</strong><br>
+    Alle Zahlen haben die gleiche Länge<br>
+    &forall; x ∈ numbers : 100 &le; x < 1000
 </p>
