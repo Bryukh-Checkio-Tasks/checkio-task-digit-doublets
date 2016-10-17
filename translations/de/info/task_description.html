@@ -1,0 +1,137 @@
+<style type="text/css">
+    .story .shadow {
+        float: left;
+        /*padding: 10px;*/
+        margin: 10px;
+        border: black;
+        /*box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1);*/
+        /*-moz-box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1);*/
+        /*-webkit-box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1);*/
+    }
+
+    .story .left {
+        float: left;
+    }
+
+    .story .right {
+        float: right;
+
+    }
+
+    .story .title {
+        font-weight: bold;
+        margin: 20px 0 20px 0;
+    }
+</style>
+<div class="for_info_only" style="position: relative;">
+    <div class="story" style="margin-bottom: 20px">
+        <img src="{{ MEDIA }}alice-queen-sepia.png" class="shadow left" width="220px">
+
+        <p>
+            ... »Und was Euch betrifft,« fuhr Alice fort und wandte sich wütend an die Schwarze
+            Königin, die sie für die Ursache des ganzen Unfugs hielt – aber die Königin war
+            nicht mehr an ihrer Seite – sie war plötzlich auf die Größe einer kleinen Puppe
+            geschrumpft und befand sich jetzt auf dem Tisch, wo sie fröhlich im Kreis ihrem
+            Schal nachlief, der hinter ihr herschleifte.
+        </p>
+
+        <p>
+            Zu jeder anderen Zeit wäre Alice darüber verwundert gewesen, aber sie war viel
+            zu aufgeregt, um sich jetzt über irgendetwas zu wundern. »Was dich betrifft,«
+            wiederholte sie und kriegte das kleine Geschöpf zu pakken, als es gerade über
+            eine Flasche sprang, die eben auf dem Tisch gelandet war, »ich schüttele dich,
+            bis du ein Kätzchen bist!«
+        </p>
+
+        <img src="{{ MEDIA }}alice-kitty-sepia.png" class="shadow right" width="220px">
+
+        <p class="title">
+            Kapitel X. Schütteln
+        </p>
+
+        <p>
+            Sie nahm die Königin vom Tisch, während sie sprach, und schüttelte sie mit aller
+            Kraft vor und zurück.<br>
+            Die Schwarze Königin leistete überhaupt keinen Widerstand; nur ihr Gesicht wurde
+            sehr klein und ihre Augen wurden groß und grün; und als Alice sie weiter schüttelte,
+            fuhr sie fort, kleiner zu werden – und fetter – und weicher – und runder – und –
+        </p>
+
+        <p class="title">
+            Kapitel XI. Erwachen
+        </p>
+
+        <p>
+            – und es war zu guter Letzt wirklich ein Kätzchen
+        </p>
+        <p style="float: right">
+            "Alice hinter den Spiegeln" von Lewis Carroll<br>
+            Aus dem Englischen von Jörg Karau, 2008
+        </p>
+        <div style="clear: both;"></div>
+    </div>
+</div>
+
+<p>
+    Wortleiter ist ein Buchstabenrätsel, das von Charles Dodgson (alias Lewis Carroll)
+    erfunden wurde.
+    Bei diesem Spiel geht es darum, zwei unterschiedliche Worte gleicher Länge durch eine
+    Kette von Worten miteinander zu verbinden.
+    Dazu darf in jedem Schritt nur ein einziger Buchstabe verändert werden.
+</p>
+
+<p>
+    Zum Beispiel: <strong>HALM</strong>&nbsp;&rArr; HALT&nbsp;&rArr; HART&nbsp;&rArr;
+    HORT&nbsp;&rArr; HORN&nbsp;&rArr; <strong>KORN</strong>
+</p>
+
+<p>
+    Die Roboter bevorzugen Ziffern anstelle von Buchstaben, also haben wir die Regeln ein
+    wenig verändert.<br>
+    Gegeben ist eine Liste von Zahlen gleicher Länge. Die erste und letzte Zahl bilden
+    den Start- und Endpunkt der Kette. Deine Aufgabe besteht darin, aus den übrigen Zahlen
+    der Liste die kürzest gültige Kette zu bilden.
+</p>
+
+<p>
+    <strong>Ein Beispiel:</strong><br>
+    Die Liste: [123, 991, 323, 321, 329, 121, 921, 125, 999]<br>
+    Die kürzest gültige Kette von der ersten (123) bis zur letzten Zahl (999) ist:
+    <strong>123</strong>&nbsp;&rArr; 121&nbsp;&rArr; 921&nbsp;&rArr; 991&nbsp;&rArr; <strong>999</strong>
+</p>
+
+<p>
+    Schreibe eine Funktion, die als Argument eine Liste von positiven, ganzen Zahlen übernimmt
+    und die kürzest gültige Kette zurückgibt.
+</p>
+
+<p>
+    <strong>Eingabe: </strong> Zahlen als Liste von ganzen Zahlen.
+</p>
+
+<p>
+    <strong>Ausgabe: </strong> Die kürzeste, gültige Kette von der ersten bis zur letzten Zahl als Liste.
+</p>
+
+<div class="for_info_only">
+    <p>
+        <strong>Beispiele:</strong>
+    </p>
+    <pre class="brush: python">
+checkio([123, 991, 323, 321, 329, 121, 921, 125, 999]) == [123, 121, 921, 991, 999]
+checkio([111, 222, 333, 444, 555, 666, 121, 727, 127, 777]) == [111, 121, 127, 727, 777]
+checkio([456, 455, 454, 356, 656, 654]) == [456, 454, 654]  # or [456, 656, 654]
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Wozu das gut ist:</strong><br>
+    Diese Aufgabe ist eine Variante des <a href="https://de.wikipedia.org/wiki/Pathfinding">
+    Pathfinding<a> für Zahlen.
+</p>
+
+<p>
+    <strong>Bedingungen:</strong><br>
+    Alle Zahlen haben die gleiche Länge<br>
+    &forall; x ∈ numbers : 100 &le; x < 1000
+</p>
